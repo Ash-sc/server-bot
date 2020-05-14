@@ -18,3 +18,10 @@
 //       .expect(200);
 //   });
 // });
+// curl --location --request POST 'localhost:7001/sshLogin' \
+// --header 'Content-Type: application/json' \
+// --data-raw '{
+// "username": "1",
+// "date": "2",
+// "ip": "3"
+// }' 
