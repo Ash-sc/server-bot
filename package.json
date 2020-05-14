@@ -6,9 +6,13 @@
   "egg": {
     "declarations": true
   },
+  "eggPlugin": {
+    "name": "security"
+  },
   "dependencies": {
     "egg": "^2.15.1",
     "egg-scripts": "^2.11.0",
+    "egg-security": "^2.8.0",
     "https-proxy-agent": "^5.0.0",
     "telegraf": "^3.38.0"
   },
@@ -32,7 +36,7 @@
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "ci": "npm run lint && npm run cov",
     "autod": "autod"
   },

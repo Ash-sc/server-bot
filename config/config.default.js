@@ -2,6 +2,8 @@
 
 'use strict';
 
+const myConfig = require('./user.config.js');
+
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
@@ -12,6 +14,12 @@ module.exports = appInfo => {
    **/
   const config = exports = {};
 
+  exports.security = {
+    csrf: {
+      enable: false,
+    },
+  };
+
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1589378030691_5335';
 
@@ -21,9 +29,7 @@ module.exports = appInfo => {
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
-    telegramToken: '',
-    telegramChatId: '1237007808',
-    httpsProxy: 'http://127.0.0.1:10809',
+    ...myConfig,
   };
 
   return {

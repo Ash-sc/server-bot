@@ -5,5 +5,5 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  router.get('/sshLogin', controller.server.sshLogin);
+  router.post('/sshLogin', controller.server.sshLogin);
 };
